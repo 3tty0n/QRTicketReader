@@ -1,5 +1,5 @@
 # QRTicketReader
 
-An App that scans QR Code and manages the data in this App.
+An iOS application that scans QR codes and manages the data in this App.
 
-This app is built for managing students in a classroom.
+This app is built to manage students in a classroom.
