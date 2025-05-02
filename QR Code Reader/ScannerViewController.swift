@@ -7,9 +7,17 @@
 
 import UIKit
 import AVFoundation
+import AudioToolbox
 
 protocol QRScannerDelegate: AnyObject {
     func didFind(code: String)
+}
+
+func playSuccessFeedback() {
+    AudioServicesPlaySystemSound(SystemSoundID(1057)) // ピッ音
+    let feedback = UIImpactFeedbackGenerator(style: .light)
+    feedback.prepare()
+    feedback.impactOccurred()
 }
 
 class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {

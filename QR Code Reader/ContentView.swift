@@ -46,6 +46,9 @@ struct ContentView: View {
                                     
                                 scannedCode = code
                                 QRDataManager.shared.save(code: code) // ファイル保存
+                                
+                                // 成功時に音と振動を鳴らす
+                                playSuccessFeedback()
                             },
                             scanArea: geo.frame(in: .global) // ← グローバル座標系で取得
                         )
